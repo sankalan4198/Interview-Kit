@@ -32,3 +32,32 @@ public class CommonElementsFromTwoArrays {
         }
         }
     }
+
+
+
+/*Also see if there re redundant data in two one of the arrays and that is common between two arrays, how to remove redundant data
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int arr1[] = { 1,2,3,4,5};
+		int arr2[]={2,5,4,16,54,1,66,4};
+		
+		List<Integer> list1=new ArrayList<>();
+		
+		for(int i=0;i<arr1.length;i++)
+		{
+		    for(int j=0;j<arr2.length;j++)
+		    {
+		        if(arr1[i]==arr2[j])
+		        {
+		            list1.add(arr1[i]);
+		        }
+		    }
+		}
+	
+		Set<Integer> s = new HashSet<Integer>(list1);
+		
+		 System.out.println(s);  
+	}
+}*/
