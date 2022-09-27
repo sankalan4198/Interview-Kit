@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		 int i;
+        String str;
+        int freq[]=new int[256];
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a sring: ");
+        str= sc.nextLine();
+        str=str.replaceAll("\\s","");
+        for(i=0;i<str.length();i++)
+        {
+            freq[(int)str.charAt(i)]++;
+        }
+        
+        
+        for(i=0;i<256;i++)
+        {
+            if(freq[i]>1)
+            {
+                System.out.println((char)i);
+            }
+        }
+
+	}
+}
