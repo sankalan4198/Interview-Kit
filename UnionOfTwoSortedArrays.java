@@ -26,6 +26,16 @@ public class UnionOfTwoSortedArrays {
         }
         Collections.sort(newList);
         System.out.println(newList);
+	    
+	    //conver to array
+	    Integer arr3[]=new Integer[newList.size()];
+        arr3=newList.toArray(arr3);
+        
+        for(int i=0;i<arr3.length;i++)
+        {
+            System.out.print(arr3[i]+" ");
+        }
+        
     }
 }
 
