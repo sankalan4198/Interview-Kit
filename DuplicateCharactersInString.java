@@ -9,7 +9,7 @@ public class Main
 		{
 		    for(int j=i+1;j<str.length();j++)
 		    {
-		        if(str.charAt(i)==str.charAt(j))
+		        if(str.charAt(i)==str.charAt(j) && str.charAt(i)!=' ')
 		        {
 		            System.out.print(str.charAt(i)+" ");
 		        }
