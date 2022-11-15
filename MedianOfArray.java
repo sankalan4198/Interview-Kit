@@ -30,7 +30,7 @@ public class MedianOfArray {
         }
         else
         {
-            m=(arr[n/2-1]+arr[n/2])/2;
+              m=(arr[(n-1)/2]+arr[n/2])/2.0;
         }
 
         System.out.println("The median is:  "+m);
