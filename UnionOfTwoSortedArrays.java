@@ -72,7 +72,30 @@ class FindUnion {
 
 		return 0;
 	}
+// Using Set
 
+	static int printUnion_HashSet(int arr1[], int arr2[], int m, int n)
+    {
+        HashSet<Integer> set= new HashSet<>();
+        ArrayList<Integer> list = new ArrayList<>();
+
+        for(int i=0;i<m;i++)
+        {
+            set.add(arr1[i]);
+        }
+
+        for(int j=0;j<n;j++)
+        {
+            set.add(arr2[j]);
+        }
+        for(int it:set)
+        {
+            list.add(it);
+        }
+        System.out.println(set);
+
+        return 0;
+    }
 	public static void main(String args[])
 	{
 		int arr1[] = { 1, 2, 4, 5, 6 };
