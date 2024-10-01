@@ -21,3 +21,26 @@ public class FindMissingElementOfArray {
         return 0;
     }
 }
+___________________________________________________________________
+
+    //FOR ARR SERIES NOT STARTING WITH 1, WHERE WE CANT APPLY SUM OF N NUMBERS FORMULA
+
+    public class Main
+{
+	public static void main(String[] args) {
+	    int arr[]={5,6,7,9,10};
+	    int diff=0;
+	    for(int i=1;i<arr.length;i++)
+	    {
+	        for(int j=i+1;j<arr.length;j++)
+	        {
+	            if(arr[j]-arr[i]==2)
+	            {
+	                System.out.println(arr[i]+1);
+	                //System.exit(0);
+	            }
+	        }
+	    }
+	    
+	}
+}
