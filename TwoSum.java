@@ -32,21 +32,20 @@ public class TwoSum {
     }
 
     //Optimal approach- Two pointer
-    public static int[] twoSum_twoPointer(int arr[],int target)
+    public static void twoSum_twoPointer(int arr[],int target)
     {
-        int answer[]=new int[2];
+        
         Arrays.sort(arr);
         int left=0,right=arr.length-1;
-        answer[0]=answer[1]=-1;
 
         while(left<=right)
         {
             int sum=arr[left]+arr[right];
             if(sum==target)
             {
-                answer[0]=left-1;
-                answer[1]=right;
-                return answer;
+                System.out.print(arr[left]+" "+arr[right]);
+                left++;
+                right--;
             }
             else if(sum<target)
             {
@@ -57,6 +56,6 @@ public class TwoSum {
                 right--;
             }
         }
-        return answer;
+        return;
     }
 }
