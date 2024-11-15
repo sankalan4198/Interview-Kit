@@ -8,8 +8,7 @@ public class TwoSum {
         int target=14;
         int[] ans=twoSum_BruteForce(arr,target);
         System.out.println(ans[0]+" "+ans[1]);
-        int[] answer=twoSum_twoPointer(arr,target);
-        System.out.println(answer[0]+" "+answer[1]);
+        twoSum_twoPointer(arr,target);
 
     }
     public static int[] twoSum_BruteForce(int arr[],int target)
