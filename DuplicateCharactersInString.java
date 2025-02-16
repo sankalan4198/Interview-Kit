@@ -55,7 +55,7 @@ public class DuplicateCharacters {
     public static void main(String[] args) {
         String string1 = "Great responsibility";
         
-        //Since strings are immutable and to avoid duplicate encounters, we have to set the charAt[j] to marked ar line-18, so we are converting
+        //Since strings are immutable and to avoid duplicate encounters, we have to set the charAt[j] to marked ar line-72, so we are converting
         //the string to string builder to make it mutable
         StringBuilder sb = new StringBuilder(string1);
         
