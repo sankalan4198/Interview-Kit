@@ -30,29 +30,35 @@ public class DuplicateElements {
     //Code to print the repeated character only once.
     //Here we add an extra check to see if the number is already printed or not
 
-    public class Main
+ public class Main
 {
     public static void main(String[] args) {
         int arr[]={2,3,1,4,2,2,3,6,5,4};
+        int marker = Integer.MIN_VALUE;
         
-        for(int i=0;i<arr.length;i++) {
-            boolean isPrinted = false;
-            for(int k=0;k<i;k++) {
-                if(arr[i] == arr[k]) {
-                    isPrinted = true;
-                    break;
-                }
-            }
-            if (isPrinted) {
+        for(int i=0;i<arr.length;i++)
+        {
+            // as j is (i+1) so when i reaches that element which is already a marker, it continues, i.e i++ goes to next element, thus avoiding the duplicate
+            if(arr[i]==marker)
+            {
                 continue;
             }
-            
-            for(int j=i+1;j<arr.length;j++) {
-                if(arr[i] == arr[j]) {
-                    System.out.print(arr[i] + " ");
-                    break;
+            boolean isDuplicate=false;
+            for(int j=i+1;j<arr.length;j++)
+            {
+                if(arr[i]==arr[j])
+                {
+                    isDuplicate=true;
+                    arr[j]=marker;
                 }
             }
+            
+            if(isDuplicate)
+            {
+                System.out.print(arr[i]+" ");
+            }
+            
         }
     }
+        
 }
