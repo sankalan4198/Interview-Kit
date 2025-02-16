@@ -45,3 +45,39 @@ public class DuplicateCharacters {
         }  
     }  
 }  
+
+
+-----------------------------------------------------------------------------
+//Method by not converting to char array
+
+	public class Main
+{
+    public static void main(String[] args) {
+        String string1 = "Great responsibility";
+        
+        //Since strings are immutable and to avoid duplicate encounters, we have to set the charAt[j] to marked ar line-18, so we are converting
+        //the string to string builder to make it mutable
+        StringBuilder sb = new StringBuilder(string1);
+        
+        int count;
+        for(int i=0;i< sb.length();i++)
+        {
+            count=1;
+            for(int j=i+1;j<sb.length();j++)
+            {
+                if(sb.charAt(i)==sb.charAt(j))
+                {
+                    count++;
+                    sb.setCharAt(j, 'm');
+                }
+            }
+            if(count>1 && sb.charAt(i)!='m')
+            {
+                System.out.print(sb.charAt(i));
+            }
+        }
+        
+    }
+        
+}
+
