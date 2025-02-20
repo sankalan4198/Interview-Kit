@@ -26,7 +26,7 @@ public class Main
 		else
 		//If arr.length is odd
 		{
-		    System.out.println("The Kth maximum element is "+arr[k+1]);
+		    System.out.println("The Kth maximum element is "+arr[arr.length-k]);
 		}
 	}
 }
