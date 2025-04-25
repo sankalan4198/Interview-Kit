@@ -22,3 +22,28 @@ public class PrimeNumberUnderLimit {
 
     }
 }
+-------------------------------------
+
+    // Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        int num=9;
+        for(int x=1;x<=num;x++)
+        {
+            int cnt=0;
+            for(int i=1;i<=x;i++)
+            {
+                if(x%i==0)
+                {
+                    cnt++;
+                }
+            }
+            if(cnt==2)
+            {
+                System.out.print(x);
+            }
+        }
+    }
+}
