@@ -33,6 +33,43 @@ public class CommonElementsFromTwoArrays {
         }
     }
 
+-------------------------------------------------
+
+	/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		
+        int[] arr1 = {1, 2, 3, 4, 5};
+        int[] arr2 = {3, 4, 5, 6, 7};
+        
+        HashSet<Integer> set=new HashSet<>();
+        HashSet<Integer> common=new HashSet<>();
+        
+        for(int i=0;i<arr1.length;i++)
+        {
+            set.add(arr1[i]);
+        }
+        
+        for(int i=0;i<arr2.length;i++)
+        {
+            if(set.contains(arr2[i]))
+            {
+                common.add(arr2[i]);
+            }
+        }
+        
+        System.out.print(common);
+
+	}
+}
 
 
 /*Also see if there re redundant data in two one of the arrays and that is common between two arrays, how to remove redundant data
