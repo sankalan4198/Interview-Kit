@@ -9,3 +9,23 @@ public class ASCII_value {
         System.out.println("The ascii value is "+asc);
     }
 }
+
+
+//Withouy contains
+public class Main
+{
+	public static void main(String[] args) {
+	    String str="Sankalan Paul Chowdhury";
+	    String substring="Roy";
+	    String arr[]=str.split(" ");
+	    
+	    for(int i=0;i<arr.length;i++)
+	    {
+	        if(arr[i].equals(substring))
+	        {
+	            System.out.print("Yes");
+	            break;
+	        }
+	    }
+	}
+}
