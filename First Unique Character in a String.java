@@ -19,5 +19,13 @@ public class Main
 		        break;
 		    }
 		}
+
+		// Check in original order
+        for (int i = 0; i < str.length(); i++) {
+            if (freq[str.charAt(i)] == 1) {
+                System.out.println(str.charAt(i));
+                break;
+            }
+        }
 	}
 }
