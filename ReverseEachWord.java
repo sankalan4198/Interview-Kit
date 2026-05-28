@@ -31,3 +31,34 @@ public class Example
 	obj.reverseWordInMyString("This is an easy Java Program");
    }
 }
+----------------------------------
+	TWO POINTER
+
+	import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        String str="Sankalan Paul";
+        String arr[]=str.split(" ");
+        StringBuilder sb= new StringBuilder();
+        
+        for(int k=0;k<arr.length;k++)
+        {
+            char ch[]=arr[k].toCharArray();
+            int i=0,j=ch.length-1;
+            
+            while(i<j)
+            {
+                char temp=ch[i];
+                ch[i]=ch[j];
+                ch[j]=temp;
+                
+                i++;
+                j--;
+            }
+            sb.append(ch).append(" ");
+        }
+        System.out.print(sb.toString().trim());
+        
+    }
+}
