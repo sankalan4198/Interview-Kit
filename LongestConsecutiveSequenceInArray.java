@@ -42,26 +42,43 @@ public class Main
 
 -------------------------------------------
 
-	// Online Java Compiler
-// Use this editor to write, compile and run your Java code online
-import java.util.Arrays;
+28th May- 2026-- follow this works for eveything
+
+	import java.util.*;
+
 class Main {
     public static void main(String[] args) {
-        int arr[]={3,8,5,7,6};
+        int arr[]={3,8,5,7,6,11,14,13,12,15,16,19,4,17,18};
         Arrays.sort(arr);
-        int cnt=1;
-        for(int i=1;i<arr.length;i++)
+        int count=1;
+        int max=0;
+        List<Integer> list= new ArrayList<>();
+        int start=0;
+        for(int i=0;i<arr.length-1;i++)
         {
-            if(arr[i]-arr[i-1]==1)
+            if(arr[i+1]-arr[i]==1)
             {
-                System.out.print(arr[i-1]+" ");
-                while(i<arr.length && arr[i]-arr[i-1]==1)
+                count++;
+                if(count>max)
                 {
-                    System.out.print(arr[i]+" ");
-                    i++;
+                    max=count;
+                    list.clear();
+                    for(int j=start;j<=i+1;j++)
+                    {
+                        list.add(arr[j]);
+                    }
                 }
             }
+            else if(arr[i+1]==arr[i])
+            {
+                continue;
+            }
+            else
+            {
+                count=1;
+                start=i+1;
+            }
         }
-        
+        System.out.println(list);
     }
 }
