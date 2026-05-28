@@ -27,6 +27,45 @@ public class LongestSubarrayWithGivenSum {
         }
         return len;
     }
+    ---------------------
+    // Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        int arr[] = {1, 2, 3, 1, 1, 1, 1, 4, 2, 3};
+
+        int k = 6;
+        int start=-1,end=-1;
+        int maxLen=0;
+        int len=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            int sum=0;
+            for(int j=i;j<arr.length;j++)
+            {
+                sum=sum+arr[j];
+                {
+                    if(sum==k)
+                    {
+                        len=j-i+1;
+                        if(len>maxLen)
+                        {
+                            maxLen=len;
+                            start=i;
+                            end=j;
+                        }
+                    }
+                }
+            }
+        }
+        for(int i=start;i<=end;i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+    }
+}-------------------------------------------------
 
     public static int longestSubArray_TwoPointer(int arr[], int k)
     {
