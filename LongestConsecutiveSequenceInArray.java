@@ -46,39 +46,47 @@ public class Main
 
 	import java.util.*;
 
-class Main {
+public class Main {
+
     public static void main(String[] args) {
-        int arr[]={3,8,5,7,6,11,14,13,12,15,16,19,4,17,18};
-        Arrays.sort(arr);
-        int count=1;
-        int max=0;
-        List<Integer> list= new ArrayList<>();
-        int start=0;
-        for(int i=0;i<arr.length-1;i++)
-        {
-            if(arr[i+1]-arr[i]==1)
-            {
-                count++;
-                if(count>max)
-                {
-                    max=count;
-                    list.clear();
-                    for(int j=start;j<=i+1;j++)
-                    {
-                        list.add(arr[j]);
-                    }
+
+        int[] arr = {3, 8, 5, 7, 6, 11, 14, 13, 12, 15, 16, 19, 4, 17, 18};
+
+        HashSet<Integer> set = new HashSet<>();
+
+        for (int num : arr) {
+            set.add(num);
+        }
+
+        int longest = 0;
+        int start = 0;
+
+        for (int num : set) {
+
+            // Start of a sequence
+            if (!set.contains(num - 1)) {
+
+                int current = num;
+                int length = 1;
+
+                while (set.contains(current + 1)) {
+                    current++;
+                    length++;
+                }
+
+                if (length > longest) {
+                    longest = length;
+                    start = num;
                 }
             }
-            else if(arr[i+1]==arr[i])
-            {
-                continue;
-            }
-            else
-            {
-                count=1;
-                start=i+1;
-            }
         }
-        System.out.println(list);
+
+        System.out.println("Length = " + longest);
+
+        System.out.print("Sequence = ");
+
+        for (int i = 0; i < longest; i++) {
+            System.out.print((start + i) + " ");
+        }
     }
 }
