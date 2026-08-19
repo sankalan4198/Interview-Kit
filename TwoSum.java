@@ -58,3 +58,47 @@ public class TwoSum {
         return;
     }
 }
+___________________________________________________
+
+    //TwO sum with distinct pairs or no duplicates
+
+    class Solution {
+    public List<List<Integer>> distinctPairs(int[] arr, int target) {
+        
+        // code here
+        List<List<Integer>> pairs= new ArrayList<>();
+        int low=0,high=arr.length-1;
+        Arrays.sort(arr);
+        while(low<high)
+        {
+            
+            if(arr[low]+arr[high]==target)
+            {
+                List<Integer> pair= new ArrayList<>();
+                pair.add(arr[low]);
+                pair.add(arr[high]);
+                pairs.add(pair);
+                low++;high--;
+                
+                while(low<high && arr[low]==arr[low-1])
+                {
+                    low++;
+                }
+                while(low<high && arr[high]==arr[high+1])
+                {
+                    high--;
+                }
+            }
+            else if(arr[low]+arr[high]>target)
+            {
+                high--;
+            }
+            else
+            {
+                low++;
+            }
+        }
+        return pairs;
+        
+    }
+}
