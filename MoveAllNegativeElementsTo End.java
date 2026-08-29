@@ -64,3 +64,31 @@ _____________________________________
 		}
 	}
 }
+
+--------------------------------------------------------------
+
+	// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+ Simple solution without extra space- 29th Aug 2026
+class Main {
+    public static void main(String[] args) {
+        int arr[]={1,2,-1,4,-2,3};
+        int k=arr.length-1;
+
+        for(int i=arr.length-1;i>=0;i--)
+        {
+            if(arr[i]<0)
+            {
+                int temp=arr[k];
+                arr[k]=arr[i];
+                arr[i]=temp;
+
+                k--;
+            }
+        }
+        for(int i=0;i<arr.length;i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
