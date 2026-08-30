@@ -22,3 +22,33 @@ public class PrimeNumbersBetweenIntervals {
 
     }
 }
+__________________________________________________
+
+    // Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        int low=3;
+        int high=9;
+
+        for(int x=low;x<=high;x++)
+        {
+            int count=0;
+            for(int i=1;i<=x;i++)
+            {
+                if(x%i==0)
+                {
+                    count++;
+                }
+            }
+            if(count==2)
+            {
+                System.out.print(x+" ");
+            }
+
+        }
+        
+        
+    }
+}
